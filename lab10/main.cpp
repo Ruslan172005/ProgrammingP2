@@ -11,7 +11,7 @@
 #include <algorithm>
 #include <iterator>
 #include <random>
-#include <future> // Додано заголовочний файл для роботи з багатопотоковістю
+#include <future> // Г„Г®Г¤Г Г­Г® Г§Г ГЈГ®Г«Г®ГўГ®Г·Г­ГЁГ© ГґГ Г©Г« Г¤Г«Гї Г°Г®ГЎГ®ГІГЁ Г§ ГЎГ ГЈГ ГІГ®ГЇГ®ГІГ®ГЄГ®ГўВіГ±ГІГѕ
 
 using namespace std;
 
@@ -85,7 +85,7 @@ Stats ExploreKeyWords(const set<string>& key_words, istream& input) {
 
     Stats result;
     for (auto& f : futures) {
-        result += f.get(); // Отримуємо результат кожного асинхронного завдання і додаємо його до загального результату
+        result += f.get(); // ГЋГІГ°ГЁГ¬ГіВєГ¬Г® Г°ГҐГ§ГіГ«ГјГІГ ГІ ГЄГ®Г¦Г­Г®ГЈГ® Г Г±ГЁГ­ГµГ°Г®Г­Г­Г®ГЈГ® Г§Г ГўГ¤Г Г­Г­Гї Ві Г¤Г®Г¤Г ВєГ¬Г® Г©Г®ГЈГ® Г¤Г® Г§Г ГЈГ Г«ГјГ­Г®ГЈГ® Г°ГҐГ§ГіГ«ГјГІГ ГІГі
     }
 
     return result;
