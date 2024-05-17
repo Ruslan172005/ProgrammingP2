@@ -1,7 +1,7 @@
 // logger.cpp
 #include <sstream>
 #include <string>
-#include "test_runner.h" // Для використання макросів ASSERT_EQUAL і т.д.
+#include "test_runner.h"
 using namespace std;
 
 class Logger {
