@@ -1,7 +1,6 @@
-// logger.cpp
 #include <sstream>
 #include <string>
-#include "test_runner.h" // Для використання макросів ASSERT_EQUAL і т.д.
+#include "test_runner.h"
 using namespace std;
 
 class Logger {
@@ -12,7 +11,6 @@ public:
     void SetLogFile(bool value) { log_file = value; }
     void SetFile(const string& file) { file_name = file; }
     void SetLine(int line) { line_number = line; }
-
     void Log(const string& message);
 
 private:
@@ -64,8 +62,6 @@ void TestLog() {
     string result = logs.str();
     ASSERT(result.find("hello") != string::npos);
 }
-
-
 
 int main() {
     TestRunner tr;
